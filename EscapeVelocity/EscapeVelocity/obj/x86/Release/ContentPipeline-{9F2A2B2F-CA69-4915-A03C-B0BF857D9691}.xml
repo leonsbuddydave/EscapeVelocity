@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>earth.png</Source>
+      <Name>earth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\earth.xnb</Output>
+      <Time>2013-02-26T16:17:00-06:00</Time>
+    </Item>
+    <Item>
+      <Source>shuttle.png</Source>
+      <Name>shuttle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\shuttle.xnb</Output>
+      <Time>2013-02-26T16:17:00-06:00</Time>
+    </Item>
+    <Item>
+      <Source>stars.jpg</Source>
+      <Name>stars</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\stars.xnb</Output>
+      <Time>2013-02-26T16:17:00-06:00</Time>
+    </Item>
+    <Item>
+      <Source>smilewalk.png</Source>
+      <Name>smilewalk</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\smilewalk.xnb</Output>
+      <Time>2013-02-26T17:37:03-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Player01.png</Source>
+      <Name>Player01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\Player01.xnb</Output>
+      <Time>2013-03-03T13:54:04-06:00</Time>
+    </Item>
+    <Item>
+      <Source>engine_ripples.png</Source>
+      <Name>engine_ripples</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\engine_ripples.xnb</Output>
+      <Time>2013-03-04T16:27:00-06:00</Time>
+    </Item>
+    <Item>
+      <Source>player.png</Source>
+      <Name>player</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\player.xnb</Output>
+      <Time>2013-03-05T22:36:22-06:00</Time>
+    </Item>
+    <Item>
+      <Source>TestFont.spritefont</Source>
+      <Name>TestFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\TestFont.xnb</Output>
+      <Time>2013-02-26T17:16:08.3739151-06:00</Time>
+    </Item>
+    <Item>
+      <Source>can.FBX</Source>
+      <Name>can</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\can.xnb</Output>
+      <Time>2013-02-26T19:02:36.966152-06:00</Time>
+      <Dependency>
+        <Key>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\obj\x86\Release\can_0.xml</Key>
+        <Value>2013-03-05T23:06:47.0420501-06:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Ship.fbx</Source>
+      <Name>Ship</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\Ship.xnb</Output>
+      <Time>2013-02-26T19:05:02.5418082-06:00</Time>
+      <Dependency>
+        <Key>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\obj\x86\Release\Ship_0.xml</Key>
+        <Value>2013-03-05T23:06:47.5721185-06:00</Value>
+      </Dependency>
+      <Request>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\ShipTexture_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>can.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\obj\x86\Release\can_0.xml</Output>
+      <Time>2013-02-26T19:02:36.966152-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Ship.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\obj\x86\Release\Ship_0.xml</Output>
+      <Time>2013-02-26T19:05:02.5418082-06:00</Time>
+    </Item>
+    <Item>
+      <Source>ShipTexture.png</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\ShipTexture_0.xnb</Output>
+      <Time>2013-02-26T19:05:02-06:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{9F2A2B2F-CA69-4915-A03C-B0BF857D9691}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Release</BuildConfiguration>
+      <CompressContent>true</CompressContent>
+      <RootDirectory>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocityContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Release\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-02-26T12:40:06.7004076-06:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

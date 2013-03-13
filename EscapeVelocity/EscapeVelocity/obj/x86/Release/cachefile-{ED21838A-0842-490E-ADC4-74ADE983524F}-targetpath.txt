@@ -1,0 +1,2 @@
+EscapeVelocity-Content\shuttle.xnb
+EscapeVelocity-Content\player.xnb

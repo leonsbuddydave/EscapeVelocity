@@ -1,0 +1,30 @@
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\obj\x86\Debug\XNAPractice.csprojResolveAssemblyReference.cache
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\XNAPractice.exe
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\XNAPractice.pdb
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\obj\x86\Debug\XNAPractice.exe
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\obj\x86\Debug\XNAPractice.pdb
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\earth.xnb
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\shuttle.xnb
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\stars.xnb
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\TestFont.xnb
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\smilewalk.xnb
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\can.xnb
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\Ship.xnb
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\ShipTexture_0.xnb
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\earth.xnb
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\shuttle.xnb
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\stars.xnb
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\smilewalk.xnb
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\TestFont.xnb
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\can.xnb
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\Ship.xnb
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\ShipTexture_0.xnb
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\XNAPractice.exe
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\XNAPractice.pdb
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\obj\x86\Debug\XNAPractice.csprojResolveAssemblyReference.cache
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\obj\x86\Debug\XNAPractice.exe
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\obj\x86\Debug\XNAPractice.pdb
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\Player01.xnb
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPractice\bin\x86\Debug\Content\engine_ripples.xnb

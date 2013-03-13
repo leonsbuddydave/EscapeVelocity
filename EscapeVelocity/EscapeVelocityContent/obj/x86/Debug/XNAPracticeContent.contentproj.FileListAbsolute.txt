@@ -1,0 +1,2 @@
+C:\Users\leons_000\Documents\Visual Studio 2010\Projects\XNAPractice\XNAPractice\XNAPracticeContent\obj\x86\Debug\XNAPracticeContent.contentprojResolveAssemblyReference.cache
+C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPracticeContent\obj\x86\Debug\XNAPracticeContent.contentprojResolveAssemblyReference.cache
