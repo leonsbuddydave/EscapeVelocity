@@ -92,6 +92,24 @@
       <Time>2013-03-10T04:35:55-05:00</Time>
     </Item>
     <Item>
+      <Source>testenemy.png</Source>
+      <Name>testenemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\Content\testenemy.xnb</Output>
+      <Time>2013-03-13T22:01:25-05:00</Time>
+    </Item>
+    <Item>
+      <Source>testenemyhit.png</Source>
+      <Name>testenemyhit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\Content\testenemyhit.xnb</Output>
+      <Time>2013-03-14T20:08:39-05:00</Time>
+    </Item>
+    <Item>
       <Source>TestFont.spritefont</Source>
       <Name>TestFont</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -119,7 +137,7 @@
       <Time>2013-02-26T19:02:36-06:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\can_0.xml</Key>
-        <Value>2013-03-13T11:17:51.1761686-05:00</Value>
+        <Value>2013-03-18T12:31:24.5824052-05:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -132,7 +150,7 @@
       <Time>2013-02-26T19:05:02-06:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Ship_0.xml</Key>
-        <Value>2013-03-13T11:17:51.4952094-05:00</Value>
+        <Value>2013-03-18T12:31:25.235544-05:00</Value>
       </Dependency>
       <Request>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\Content\ShipTexture_0.xnb</Request>
     </Item>

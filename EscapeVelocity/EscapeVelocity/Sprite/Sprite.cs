@@ -7,11 +7,13 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+using Box2D.XNA;
+
 namespace XNAPractice
 {
-    public class Sprite : Drawable
+    public class Sprite : Drawable, IContactListener
     {
-        private Texture2D texture;
+        protected Texture2D texture;
         protected float
             angle = 0.0f,
             scaleX = 1.0f,
@@ -20,7 +22,14 @@ namespace XNAPractice
 
         protected int Width = 0, Height = 0;
 
-        protected PolygonCollider polygonCollider = null;
+        protected Collider collider = null;
+
+		public delegate void OnEntityCollisionListener(Entity theOtherGuy);
+
+		public OnEntityCollisionListener Collision;
+
+		protected Body mBody = null;
+		protected Fixture mFixture = null;
 
 	    public Sprite(Texture2D texture, float x, float y)
 	    {
@@ -32,43 +41,28 @@ namespace XNAPractice
             this.Height = texture.Height;
 	    }
 
-        public bool SimpleCollidesWith(Sprite him)
+        public bool WithinRangeOf(Sprite him)
         {
-            if (this.polygonCollider == null || him.polygonCollider == null)
+            if (this.collider == null || him.collider == null)
                 return false;
 
-            return polygonCollider.SimpleCollidesWith(him.polygonCollider);
+            return collider.WithinRangeOf(him.collider);
         }
 
-        public bool ComplexCollidesWith(Sprite him)
+        public Vector2 getCenter()
         {
-            // initial check
-            if (
-                ( this.polygonCollider.CollisionCategory & him.polygonCollider.CollisionGroups ) != this.polygonCollider.CollisionCategory &&
-                ( him.polygonCollider.CollisionCategory & this.polygonCollider.CollisionGroups ) != him.polygonCollider.CollisionCategory
-                )
-            {
-                // we have no desired matches here - nothing happens
-                return false;
-            }
-
-            return false;
+            return new Vector2(Width / 2, Height / 2);
         }
 
-        public Point getCenter()
+        public Vector2 getWorldCenter()
         {
-            return new Point(Width / 2, Height / 2);
+            return new Vector2(Width / 2 + GetRealX(), Height / 2 + GetRealY());
         }
 
-        public Point getWorldCenter()
-        {
-            return new Point(Width / 2 + GetRealX(), Height / 2 + GetRealY());
-        }
-
-        public PolygonCollider getCollider()
-        {
-            return polygonCollider;
-        }
+		public Body GetBody()
+		{
+			return mBody;
+		}
 
         public void setScale(float scale)
         {
@@ -100,9 +94,12 @@ namespace XNAPractice
             {
                 drawX = x + parent.GetX();
                 drawY = y + parent.GetY();
+
+				drawX *= Globals.PixelsPerMeter;
+				drawY *= Globals.PixelsPerMeter;
             }
 
-            spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp, null, null);
+			
             spriteBatch.Draw(
                 texture,
                 new Vector2( drawX, drawY ),
@@ -114,9 +111,27 @@ namespace XNAPractice
                 SpriteEffects.None,
                 layer
              );
-            spriteBatch.End();
 
-            DrawChildren(spriteBatch);
+			if (Settings.DEBUG_OUTPUT)
+			{
+				if (collider != null)
+					Primitives.DrawCollider(collider, spriteBatch, Color.White);
+			}
         }
+
+		public override void Update(float dt)
+		{
+			// If we're attached to a physics body, relocate to wherever it went
+			if (mBody != null)
+			{
+				SetPosition(mBody.GetPosition());
+			}
+		}
+
+		// Collision shit
+		public virtual void BeginContact(Contact contact) { }
+		public virtual void EndContact(Contact contact) { }
+		public virtual void PreSolve(Contact contact, ref Manifold oldManifold) { }
+		public virtual void PostSolve(Contact contact, ref ContactImpulse impulse) { }
     }
 }

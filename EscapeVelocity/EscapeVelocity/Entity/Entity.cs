@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 
 namespace XNAPractice
 {
@@ -71,7 +72,7 @@ namespace XNAPractice
         }
 
         // Queues this entity for removal
-        public void Remove()
+        public virtual void Remove()
         {
             World.getinstance().AddToRemovalQueue(this);
         }
@@ -156,6 +157,12 @@ namespace XNAPractice
 			this.z = z;
 		}
 
+		public void SetPosition(Vector2 pos)
+		{
+			SetX(pos.X);
+			SetY(pos.Y);
+		}
+
 		public float GetX()
 		{
 			return x;
@@ -171,10 +178,15 @@ namespace XNAPractice
 			return z;
 		}
 
+		public Vector2 GetRealPosition()
+		{
+			return new Vector2(GetRealX(), GetRealY());
+		}
+
         public float GetRealX()
         {
-            float x = 0;
-            Entity ent = this;
+            float x = GetX();
+            Entity ent = this.parent;
 
             while (ent != null)
             {
@@ -187,8 +199,8 @@ namespace XNAPractice
 
         public float GetRealY()
         {
-            float y = 0;
-            Entity ent = this;
+            float y = GetY();
+            Entity ent = this.parent;
 
             while (ent != null)
             {

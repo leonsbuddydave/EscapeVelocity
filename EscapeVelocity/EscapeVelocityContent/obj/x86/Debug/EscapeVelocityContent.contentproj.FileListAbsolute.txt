@@ -1,3 +1,4 @@
 C:\Users\leons_000\Dropbox\XNAPractice\XNAPractice\XNAPracticeContent\obj\x86\Debug\EscapeVelocityContent.contentprojResolveAssemblyReference.cache
 C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocityContent\obj\x86\Debug\EscapeVelocityContent.contentprojResolveAssemblyReference.cache
 \\VBOXSVR\EscapeVelocity\EscapeVelocity\EscapeVelocityContent\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocityContent\obj\x86\Debug\EscapeVelocityContent.contentprojResolveAssemblyReference.cache

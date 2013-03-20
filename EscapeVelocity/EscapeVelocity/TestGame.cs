@@ -27,13 +27,14 @@ namespace XNAPractice
         public TestGame()
         {
             graphics = new GraphicsDeviceManager(this);
+
             this.graphics.PreferredBackBufferWidth = gameWidth;
             this.graphics.PreferredBackBufferHeight = gameHeight;
             this.Window.Title = "Escape Velocity";
 
             //graphics.IsFullScreen = true;
-            graphics.SynchronizeWithVerticalRetrace = false;
-            IsFixedTimeStep = false;
+            //graphics.SynchronizeWithVerticalRetrace = false;
+            //IsFixedTimeStep = false;
 
             Content.RootDirectory = "Content";
         }
@@ -59,11 +60,13 @@ namespace XNAPractice
         protected override void LoadContent()
         {
             Globals.Content = this.Content;
+			Globals.Graphics = this.graphics.GraphicsDevice;
 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            world.AddChild(new Player(100, 100));
+            world.AddChild(new Player(0, 0));
+			world.AddChild(new TestEnemy(18, 3));
         }
 
         /// <summary>
@@ -101,9 +104,9 @@ namespace XNAPractice
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            Matrix viewMatrix = Matrix.CreateLookAt(new Vector3(0, 0, 10), new Vector3(0, 0, 0), Vector3.UnitY);
-            Matrix projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45), (float)gameWidth / (float)gameHeight, 0.1f, 100f);
-            Matrix worldMatrix = Matrix.CreateTranslation(new Vector3(0, 0, 0));
+            Globals.ViewMatrix = Matrix.CreateLookAt(new Vector3(0, 0, 10), new Vector3(0, 0, 0), Vector3.UnitY);
+            Globals.ProjectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver4, GraphicsDevice.Viewport.AspectRatio, 0.1f, 100f);
+            Globals.WorldMatrix = Matrix.CreateTranslation(new Vector3(0, 0, 0));
 
             world.Draw(spriteBatch);
 

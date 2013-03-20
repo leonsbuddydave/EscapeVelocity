@@ -18,17 +18,18 @@ namespace XNAPractice
             : base(Globals.Content.Load<Texture2D>("player"), 1, 1, x, y, .5f)
         {
             tag = Tags.PLAYER;
+			layer = .5f;
 
-            setWeapon(WeaponSlot.PRIMARY, new SimpleGun(0, 54));
+            setWeapon(WeaponSlot.PRIMARY, new SimpleGun(0, 54 / Globals.PixelsPerMeter));
 
-            polygonCollider = new PolygonCollider(this, new Polygon(new Point[]{
-                new Point(-72, -54),
-                new Point(72, -54),
-                new Point(72, 54),
-                new Point(-72, 54)
-            }));
-            polygonCollider.CollisionGroups = CollisionGroup.COLLIDES_ENEMIES | CollisionGroup.COLLIDES_ENEMY_PROJECTILES;
-            polygonCollider.CollisionCategory = CollisionGroup.COLLIDES_PLAYER;
+            collider = new Collider(this, new Vector2[]{
+                new Vector2(-72, -54),
+                new Vector2(72, -54),
+                new Vector2(72, 54),
+                new Vector2(-72, 54)
+            });
+            collider.CollisionGroups = CollisionGroup.COLLIDES_ENEMY_PROJECTILES;
+            collider.CollisionCategory = CollisionGroup.COLLIDES_PLAYER;
         }
 
         // Assigns a weapon to a particular slot on the player - 
@@ -67,8 +68,8 @@ namespace XNAPractice
                     {
                         MouseState mouse = Mouse.GetState();
 
-                        x += (mouse.X - TestGame.gameWidth / 2 );
-                        y += (mouse.Y - TestGame.gameHeight / 2 );
+                        x += (mouse.X - TestGame.gameWidth / 2 ) / Globals.PixelsPerMeter;
+                        y += (mouse.Y - TestGame.gameHeight / 2 ) / Globals.PixelsPerMeter;
 
                         if (mouse.LeftButton == ButtonState.Pressed && weaponPrimary != null)
                             weaponPrimary.Fire();

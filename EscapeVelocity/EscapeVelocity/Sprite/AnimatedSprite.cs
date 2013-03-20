@@ -14,7 +14,6 @@ namespace XNAPractice
 {
     class AnimatedSprite : Sprite
     {
-        public Texture2D texture { get; set; }
         public int rows { get; set; }
         public int columns { get; set; }
         private float timePerFrame;
@@ -88,6 +87,9 @@ namespace XNAPractice
             {
                 drawX = x + parent.GetX();
                 drawY = y + parent.GetY();
+
+				drawX *= Globals.PixelsPerMeter;
+				drawY *= Globals.PixelsPerMeter;
             }
 
             int width = texture.Width / columns;
@@ -98,7 +100,6 @@ namespace XNAPractice
 
             Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
 
-            spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp, null, null);
             spriteBatch.Draw(
                 texture,
                 new Vector2(drawX, drawY),
@@ -110,9 +111,6 @@ namespace XNAPractice
                 SpriteEffects.None,
                 layer
              );
-            spriteBatch.End();
-
-            DrawChildren(spriteBatch);
         }
     }
 }

@@ -8,6 +8,8 @@ Content\player.xnb
 Content\simplegun.xnb
 Content\simpleprojectile.xnb
 Content\cursor.xnb
+Content\testenemy.xnb
+Content\testenemyhit.xnb
 Content\TestFont.xnb
 Content\DebugOutput.xnb
 Content\can.xnb

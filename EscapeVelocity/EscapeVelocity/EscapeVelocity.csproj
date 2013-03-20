@@ -73,9 +73,11 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actors\TestEnemy.cs" />
     <Compile Include="Collision\BroadPhaseCollisionMatch.cs" />
-    <Compile Include="Collision\ICollider.cs" />
-    <Compile Include="Collision\PolygonCollider.cs" />
+    <Compile Include="Collision\Collider.cs" />
+    <Compile Include="Collision\CollisionResult.cs" />
+    <Compile Include="Debug\Primitives.cs" />
     <Compile Include="Enums\CollisionGroup.cs" />
     <Compile Include="Enums\Tags.cs" />
     <Compile Include="Enums\WeaponSlot.cs" />
@@ -84,7 +86,6 @@
     <Compile Include="Modifiers\PersistentMoveModifier.cs" />
     <Compile Include="Persistent\ControlType.cs" />
     <Compile Include="Persistent\Settings.cs" />
-    <Compile Include="Shape\Point.cs" />
     <Compile Include="Shape\Polygon.cs" />
     <Compile Include="Sprite\AnimatedSprite.cs" />
     <Compile Include="Drawable\Drawable.cs" />
@@ -143,6 +144,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Box2D.XNA\Box2D.XNA - windows.csproj">
+      <Project>{22791486-E721-4511-AA4B-DA26CF5D0F2E}</Project>
+      <Name>Box2D.XNA - windows</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EscapeVelocityContent\EscapeVelocityContent.contentproj">
       <Project>{9F2A2B2F-CA69-4915-A03C-B0BF857D9691}</Project>
       <Name>EscapeVelocityContent %28Content%29</Name>
