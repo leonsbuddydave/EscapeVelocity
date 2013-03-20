@@ -7,6 +7,11 @@ using Microsoft.Xna.Framework.Graphics;
 
 using FarseerPhysics;
 using FarseerPhysics.Collision;
+using FarseerPhysics.Common;
+using FarseerPhysics.Collision.Shapes;
+using FarseerPhysics.Factories;
+using FarseerPhysics.Dynamics;
+using FarseerPhysics.Dynamics.Contacts;
 
 namespace XNAPractice
 {
@@ -24,39 +29,27 @@ namespace XNAPractice
 		{
 			layer = .5f;
 
-            BodyDef bd = new BodyDef();
-            PolygonShape shape = new PolygonShape();
-            FixtureDef fd = new FixtureDef();
+			mBody = BodyFactory.CreateBody(Graph.getPhysicsWorld());
+			mBody.BodyType = BodyType.Dynamic;
+			mBody.Position = new Vector2(x, y);
 
-            bd.type = BodyType.Dynamic;
-			bd.position = new Vector2(x, y);
-            mBody = World.getPhysicsWorld().CreateBody(bd);
-
-            shape.Set(new Vector2[]
+			PolygonShape shape = new PolygonShape(new Vertices(new Vector2[]
             {
-                new Vector2(0, -1.5f),
-                new Vector2(1.44f, 1.5f),
-                new Vector2(-1.44f, 1.5f)
-            }, 3);
+                new Vector2(0, -1.08f),
+                new Vector2(1.44f, 1.08f),
+                new Vector2(-1.44f, 1.08f)
+            }), 1);
 
-            fd.shape = shape;
-            fd.density = 1.0f;
-            fd.friction = 5.0f;
-            fd.restitution = .5f;
-			fd.filter.maskBits = CollisionGroup.MASK_ENEMY;
-			fd.filter.categoryBits = CollisionGroup.MASK_PLAYER_PROJECTILE;
+			Fixture f = mBody.CreateFixture(shape);
 
-            mFixture = mBody.CreateFixture(fd);
+			f.OnCollision = OnCollision;
 		}
 
-		public override void BeginContact(Contact contact)
+		public override bool OnCollision(Fixture f1, Fixture f2, Contact contact)
 		{
-			hit = true;
-		}
-
-		public override void EndContact(Contact contact)
-		{
-			hit = false;
+            hit = true;
+            currentDelay = hitDelay;
+			return true;
 		}
 
 		public override void Update(float dt)

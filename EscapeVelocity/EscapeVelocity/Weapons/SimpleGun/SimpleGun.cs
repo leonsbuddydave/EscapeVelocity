@@ -22,7 +22,7 @@ namespace XNAPractice
             // If our delay has run out, we can fire
             if (delayRemaining <= 0)
             {
-                World.getinstance().AddChild(new SimpleProjectile(GetRealX(), GetRealY()));
+                Graph.getinstance().AddChild(new SimpleProjectile(GetRealX() + texture.Width / 2 / Globals.PixelsPerMeter, GetRealY()));
                 delayRemaining = DELAY_BETWEEN_SHOTS;
             }
         }

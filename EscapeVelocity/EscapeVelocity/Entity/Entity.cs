@@ -18,7 +18,7 @@ namespace XNAPractice
 
 		public Entity ()
 		{
-            parent = World.getinstance();
+            parent = Graph.getinstance();
 		}
 
 		// Adds an entity modifier to this entity
@@ -55,7 +55,7 @@ namespace XNAPractice
         // Attaches a child to tihs entity
         public virtual void AddChild(Entity child)
         {
-            World.getinstance().AddChild(child);
+            Graph.getinstance().AddChild(child);
             child.SetParent(this);
             children.Add(child);
         }
@@ -74,7 +74,7 @@ namespace XNAPractice
         // Queues this entity for removal
         public virtual void Remove()
         {
-            World.getinstance().AddToRemovalQueue(this);
+            Graph.getinstance().AddToRemovalQueue(this);
         }
 
         // Set this entity's parent

@@ -83,5 +83,7 @@ F:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\obj\x86\
 F:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\obj\x86\Debug\XNAPractice.pdb
 F:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\Content\testenemyhit.xnb
 C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\Content\testenemyhit.xnb
-C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\Box2D.XNA.dll
-C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\Box2D.XNA.pdb
+C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\FarseerPhysicsXNA.dll
+C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\FarseerPhysicsXNA.pdb
+C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\FarseerPhysicsXNA.xml
+C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\Content\Scene01 lineart.xnb

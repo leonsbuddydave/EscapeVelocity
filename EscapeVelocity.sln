@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscapeVelocity", "EscapeVel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscapeVelocityContent", "EscapeVelocity\EscapeVelocityContent\EscapeVelocityContent.contentproj", "{9F2A2B2F-CA69-4915-A03C-B0BF857D9691}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Box2D.XNA - windows", "Box2D.XNA\Box2D.XNA - windows.csproj", "{22791486-E721-4511-AA4B-DA26CF5D0F2E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farseer Physics XNA", "Farseer\Farseer Physics Engine 3.3.1 XNA\Farseer Physics XNA.csproj", "{0A850700-1ABB-4288-A391-6726B90EBEB9}"
 EndProject
 Global
@@ -29,12 +27,6 @@ Global
 		{9F2A2B2F-CA69-4915-A03C-B0BF857D9691}.Debug|x86.ActiveCfg = Debug|x86
 		{9F2A2B2F-CA69-4915-A03C-B0BF857D9691}.Release|Any CPU.ActiveCfg = Release|x86
 		{9F2A2B2F-CA69-4915-A03C-B0BF857D9691}.Release|x86.ActiveCfg = Release|x86
-		{22791486-E721-4511-AA4B-DA26CF5D0F2E}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{22791486-E721-4511-AA4B-DA26CF5D0F2E}.Debug|x86.ActiveCfg = Debug|x86
-		{22791486-E721-4511-AA4B-DA26CF5D0F2E}.Debug|x86.Build.0 = Debug|x86
-		{22791486-E721-4511-AA4B-DA26CF5D0F2E}.Release|Any CPU.ActiveCfg = Release|x86
-		{22791486-E721-4511-AA4B-DA26CF5D0F2E}.Release|x86.ActiveCfg = Release|x86
-		{22791486-E721-4511-AA4B-DA26CF5D0F2E}.Release|x86.Build.0 = Release|x86
 		{0A850700-1ABB-4288-A391-6726B90EBEB9}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{0A850700-1ABB-4288-A391-6726B90EBEB9}.Debug|x86.ActiveCfg = Debug|x86
 		{0A850700-1ABB-4288-A391-6726B90EBEB9}.Debug|x86.Build.0 = Debug|x86
@@ -47,7 +39,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3F0DF897-437B-499D-95D2-115431CF20C4} = {B3B03B18-87B2-4B60-8776-6A34556A6A7E}
-		{22791486-E721-4511-AA4B-DA26CF5D0F2E} = {B3B03B18-87B2-4B60-8776-6A34556A6A7E}
 		{0A850700-1ABB-4288-A391-6726B90EBEB9} = {B3B03B18-87B2-4B60-8776-6A34556A6A7E}
 	EndGlobalSection
 EndGlobal

@@ -5,13 +5,14 @@ Content\smilewalk.xnb
 Content\Player01.xnb
 Content\engine_ripples.xnb
 Content\player.xnb
-Content\TestFont.xnb
-Content\can.xnb
-Content\Ship.xnb
-Content\ShipTexture_0.xnb
 Content\simplegun.xnb
 Content\simpleprojectile.xnb
 Content\cursor.xnb
-Content\DebugOutput.xnb
 Content\testenemy.xnb
 Content\testenemyhit.xnb
+Content\TestFont.xnb
+Content\DebugOutput.xnb
+Content\can.xnb
+Content\Ship.xnb
+Content\ShipTexture_0.xnb
+Content\Scene01 lineart.xnb

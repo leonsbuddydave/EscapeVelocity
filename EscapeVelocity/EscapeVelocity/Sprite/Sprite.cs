@@ -7,13 +7,19 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-using Box2D.XNA;
+using FarseerPhysics;
+using FarseerPhysics.Dynamics;
+using FarseerPhysics.Common;
+using FarseerPhysics.Dynamics.Contacts;
+using FarseerPhysics.Collision;
 
 namespace XNAPractice
 {
-    public class Sprite : Drawable, IContactListener
+    public class Sprite : Drawable
     {
         protected Texture2D texture;
+		protected Texture2D boundingTexture;
+
         protected float
             angle = 0.0f,
             scaleX = 1.0f,
@@ -124,14 +130,15 @@ namespace XNAPractice
 			// If we're attached to a physics body, relocate to wherever it went
 			if (mBody != null)
 			{
-				SetPosition(mBody.GetPosition());
+				SetPosition(mBody.Position);
+				angle = mBody.Rotation;
 			}
 		}
 
-		// Collision shit
-		public virtual void BeginContact(Contact contact) { }
-		public virtual void EndContact(Contact contact) { }
-		public virtual void PreSolve(Contact contact, ref Manifold oldManifold) { }
-		public virtual void PostSolve(Contact contact, ref ContactImpulse impulse) { }
+		public virtual bool OnCollision(Fixture f1, Fixture f2, Contact contact)
+		{
+
+			return true;
+		}
     }
 }

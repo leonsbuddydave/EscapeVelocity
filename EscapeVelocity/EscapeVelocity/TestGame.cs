@@ -9,6 +9,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+using FarseerPhysics;
+
 namespace XNAPractice
 {
     /// <summary>
@@ -22,7 +24,7 @@ namespace XNAPractice
         public static int gameWidth = 1280;
         public static int gameHeight = 720;
 
-        World world = new World();
+        Graph graph = new Graph();
 
         public TestGame()
         {
@@ -35,6 +37,8 @@ namespace XNAPractice
             //graphics.IsFullScreen = true;
             //graphics.SynchronizeWithVerticalRetrace = false;
             //IsFixedTimeStep = false;
+
+			
 
             Content.RootDirectory = "Content";
         }
@@ -65,8 +69,8 @@ namespace XNAPractice
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            world.AddChild(new Player(0, 0));
-			world.AddChild(new TestEnemy(18, 3));
+            graph.AddChild(new Player(0, 0));
+			graph.AddChild(new TestEnemy(18, 3));
         }
 
         /// <summary>
@@ -89,7 +93,7 @@ namespace XNAPractice
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
 
-            world.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
+            graph.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
 
             Mouse.SetPosition(TestGame.gameWidth / 2, TestGame.gameHeight / 2);
 
@@ -108,7 +112,7 @@ namespace XNAPractice
             Globals.ProjectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver4, GraphicsDevice.Viewport.AspectRatio, 0.1f, 100f);
             Globals.WorldMatrix = Matrix.CreateTranslation(new Vector3(0, 0, 0));
 
-            world.Draw(spriteBatch);
+            graph.Draw(spriteBatch);
 
             base.Draw(gameTime);
         }

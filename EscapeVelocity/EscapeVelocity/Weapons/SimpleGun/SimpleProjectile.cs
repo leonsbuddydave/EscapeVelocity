@@ -5,7 +5,12 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Box2D.XNA;
+using FarseerPhysics;
+using FarseerPhysics.Collision;
+using FarseerPhysics.Common;
+using FarseerPhysics.Collision.Shapes;
+using FarseerPhysics.Factories;
+using FarseerPhysics.Dynamics;
 
 namespace XNAPractice
 {
@@ -17,45 +22,35 @@ namespace XNAPractice
 
         protected int damage = 1;
 
-		private MoveModifier mm;
-
         public SimpleProjectile(float x, float y) : base(Globals.Content.Load<Texture2D>("simpleprojectile"), x, y)
         {
 			layer = .55f;
             instance = this;
 
-			mm = new MoveModifier(1450, y, projectileSpeed);
+			mBody = BodyFactory.CreateBody(Graph.getPhysicsWorld());
+			mBody.BodyType = BodyType.Dynamic;
+			mBody.Position = new Vector2(x, y);
+			mBody.Restitution = 0f;
 
-			BodyDef bd = new BodyDef();
-			PolygonShape shape = new PolygonShape();
-			FixtureDef fd = new FixtureDef();
-
-			bd.type = BodyType.Dynamic;
-			bd.position = new Vector2(x, y);
-			mBody = World.getPhysicsWorld().CreateBody(bd);
-
-			mBody.SetUserData(this);
-
-			shape.Set(new Vector2[]
+			PolygonShape shape = new PolygonShape(new Vertices(new Vector2[]
             {
                 new Vector2(-.26f, -.18f),
                 new Vector2(.26f, -.18f),
                 new Vector2(.26f, .18f),
                 new Vector2(-.26f, .18f)
-            }, 4);
+            }), .0001f);
 
-			fd.shape = shape;
-			fd.density = 1.0f;
-			fd.friction = 5.0f;
-			fd.restitution = .5f;
-			fd.filter.maskBits = CollisionGroup.MASK_PLAYER_PROJECTILE;
-			fd.filter.categoryBits = CollisionGroup.MASK_ENEMY;
-			fd.density = .01f;
+			Fixture f = mBody.CreateFixture(shape);
 
-			mFixture = mBody.CreateFixture(fd);
-
-			World.getPhysicsWorld().ContactListener = this;
+			f.OnCollision = OnCollision;
         }
+
+		public override bool OnCollision(Fixture f1, Fixture f2, FarseerPhysics.Dynamics.Contacts.Contact contact)
+		{
+			this.Remove();
+
+			return true;
+		}
 
         public int getDamage()
         {
@@ -66,12 +61,7 @@ namespace XNAPractice
 		{
 			base.Update(dt);
 
-			mBody.SetLinearVelocity(new Vector2(40, 0));
-		}
-
-		public override void BeginContact(Contact contact)
-		{
-			instance.Remove();
+			mBody.LinearVelocity = new Vector2(40, 0);
 		}
     }
 }
