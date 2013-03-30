@@ -14,7 +14,7 @@ namespace XNAPractice
 
         public SimpleGun(float x, float y) : base(Globals.Content.Load<Texture2D>("simplegun"), x, y)
         {
-			layer = .6f;
+			layer = .4f;
         }
 
         public void Fire()

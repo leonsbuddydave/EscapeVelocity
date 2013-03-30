@@ -6,6 +6,14 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
+using FarseerPhysics;
+using FarseerPhysics.Collision;
+using FarseerPhysics.Common;
+using FarseerPhysics.Collision.Shapes;
+using FarseerPhysics.Factories;
+using FarseerPhysics.Dynamics;
+using FarseerPhysics.Dynamics.Contacts;
+
 namespace XNAPractice
 {
     class Player : AnimatedSprite
@@ -22,14 +30,25 @@ namespace XNAPractice
 
             setWeapon(WeaponSlot.PRIMARY, new SimpleGun(0, 54 / Globals.PixelsPerMeter));
 
-            collider = new Collider(this, new Vector2[]{
-                new Vector2(-72, -54),
-                new Vector2(72, -54),
-                new Vector2(72, 54),
-                new Vector2(-72, 54)
-            });
-            collider.CollisionGroups = CollisionGroup.COLLIDES_ENEMY_PROJECTILES;
-            collider.CollisionCategory = CollisionGroup.COLLIDES_PLAYER;
+			mBody = BodyFactory.CreateBody(Graph.getPhysicsWorld());
+			mBody.BodyType = BodyType.Dynamic;
+			mBody.Position = new Vector2(x, y);
+			mBody.IgnoreGravity = true;
+
+			PolygonShape shape = new PolygonShape(new Vertices(new Vector2[]
+            {
+                new Vector2(-1.44f, -1.08f),
+                new Vector2(1.44f, -1.08f),
+                new Vector2(1.44f, 1.08f),
+                new Vector2(-1.44f, 1.08f)
+            }), 1);
+
+			Fixture f = mBody.CreateFixture(shape);
+
+			f.CollisionCategories = Group.PLAYER;
+			f.CollidesWith = Group.ENEMY | Group.PROJECTILE_ENEMY;
+
+			f.OnCollision = OnCollision;
         }
 
         // Assigns a weapon to a particular slot on the player - 
@@ -68,8 +87,15 @@ namespace XNAPractice
                     {
                         MouseState mouse = Mouse.GetState();
 
-                        x += (mouse.X - TestGame.gameWidth / 2 ) / Globals.PixelsPerMeter;
-                        y += (mouse.Y - TestGame.gameHeight / 2 ) / Globals.PixelsPerMeter;
+						float deltaX, deltaY;
+
+                        deltaX = (mouse.X - TestGame.gameWidth / 2 ) / Globals.PixelsPerMeter;
+                        deltaY = (mouse.Y - TestGame.gameHeight / 2 ) / Globals.PixelsPerMeter;
+
+						Vector2 curPos = mBody.Position;
+						Vector2 newPos = new Vector2(curPos.X + deltaX, curPos.Y + deltaY);
+
+						mBody.Position = newPos;
 
                         if (mouse.LeftButton == ButtonState.Pressed && weaponPrimary != null)
                             weaponPrimary.Fire();

@@ -14,22 +14,9 @@ namespace XNAPractice
 
 		private static float debugLineWidth = 4f;
 
-		public static void DrawCollider(Collider collider, SpriteBatch batch, Color color)
+		public static void DrawCollider( SpriteBatch batch, Color color)
 		{
-			Globals.Graphics.Textures[0] = null;
-			lineBlank.SetData(new[] { color });
-
-			Vector2[] points = collider.GetPolygon().GetPoints();
-
-			Vector2 ownerPosition = collider.GetOwner().GetRealPosition();
-
-			for (int i = 0; i < points.Length; i++)
-			{
-				Vector2 point1 = points[i] + ownerPosition;
-				Vector2 point2 = points[i + 1 < points.Length ? i + 1 : 0] + ownerPosition;
-
-				DrawLine(batch, color, point1, point2);
-			}
+			
 		}
 
 		private static void DrawLine(SpriteBatch batch, Color color, Vector2 point1, Vector2 point2)

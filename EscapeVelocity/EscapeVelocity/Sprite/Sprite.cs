@@ -28,8 +28,6 @@ namespace XNAPractice
 
         protected int Width = 0, Height = 0;
 
-        protected Collider collider = null;
-
 		public delegate void OnEntityCollisionListener(Entity theOtherGuy);
 
 		public OnEntityCollisionListener Collision;
@@ -46,14 +44,6 @@ namespace XNAPractice
             this.Width = texture.Width;
             this.Height = texture.Height;
 	    }
-
-        public bool WithinRangeOf(Sprite him)
-        {
-            if (this.collider == null || him.collider == null)
-                return false;
-
-            return collider.WithinRangeOf(him.collider);
-        }
 
         public Vector2 getCenter()
         {
@@ -120,9 +110,8 @@ namespace XNAPractice
 
 			if (Settings.DEBUG_OUTPUT)
 			{
-				if (collider != null)
-					Primitives.DrawCollider(collider, spriteBatch, Color.White);
-			}
+                // Some kind of debug drawing happens here?
+            }
         }
 
 		public override void Update(float dt)

@@ -12,7 +12,7 @@ namespace XNAPractice
 	{
         private static Graph instance = null;
 
-		private static World physicsWorld = new World( new Vector2(0f, 0f) );
+		private static World physicsWorld = new World( new Vector2(0f, 9.8f) );
 
         protected List<Entity> removalQueue = new List<Entity>();
 
@@ -29,11 +29,15 @@ namespace XNAPractice
 		public Graph ()
 		{
             instance = this;
+
+			AddChild(new WorldBorder());
 		}
 
 		public override void Update(float dt)
 		{
             base.Update(dt);
+
+            ClearRemovalQueue();
 
             Globals.DeltaTime = dt;
 
@@ -48,13 +52,12 @@ namespace XNAPractice
 
 			physicsWorld.Step(dt);
 
-			ClearRemovalQueue();
 		}
 
         // Maybe avoid all the checks each time by just keeping a list of IDrawable entities
         public void Draw(SpriteBatch spriteBatch)
 		{
-			spriteBatch.Begin(SpriteSortMode.FrontToBack, null, SamplerState.PointClamp, null, null);
+			spriteBatch.Begin(SpriteSortMode.BackToFront, null, SamplerState.PointClamp, null, null);
 			//spriteBatch.Begin();
 			int i = 0;
 			int t = children.Count;
@@ -81,7 +84,7 @@ namespace XNAPractice
                 spriteBatch.DrawString(Fonts.DebugOutput, debugString, new Vector2(10, 10), Color.White);
 
                 string logString = Log.GetLastNString(13);
-                spriteBatch.DrawString(Fonts.DebugOutput, logString, new Vector2(10, 500), Color.White);
+                spriteBatch.DrawString(Fonts.DebugOutput, logString, new Vector2(10, 500), Color.White, 0, new Vector2(0, 0), 1.0f, SpriteEffects.None, 1.0f);
             }
 
 			spriteBatch.End();
@@ -89,7 +92,8 @@ namespace XNAPractice
 
         public void AddToRemovalQueue(Entity e)
         {
-            removalQueue.Add(e);
+			if (!removalQueue.Contains(e))
+				removalQueue.Add(e);
         }
 
         private void ClearRemovalQueue()

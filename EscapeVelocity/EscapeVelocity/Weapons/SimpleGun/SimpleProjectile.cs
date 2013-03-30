@@ -16,7 +16,7 @@ namespace XNAPractice
 {
     class SimpleProjectile : Sprite
     {
-        private const int projectileSpeed = 1400;
+        private Vector2 projectileVelocity = new Vector2(50, 0);
 
         private SimpleProjectile instance;
 
@@ -30,7 +30,8 @@ namespace XNAPractice
 			mBody = BodyFactory.CreateBody(Graph.getPhysicsWorld());
 			mBody.BodyType = BodyType.Dynamic;
 			mBody.Position = new Vector2(x, y);
-			mBody.Restitution = 0f;
+			mBody.Restitution = 1f;
+			mBody.IgnoreGravity = true;
 
 			PolygonShape shape = new PolygonShape(new Vertices(new Vector2[]
             {
@@ -38,17 +39,21 @@ namespace XNAPractice
                 new Vector2(.26f, -.18f),
                 new Vector2(.26f, .18f),
                 new Vector2(-.26f, .18f)
-            }), .0001f);
+            }), .1f);
 
 			Fixture f = mBody.CreateFixture(shape);
 
 			f.OnCollision = OnCollision;
+
+			f.CollisionCategories = Group.PROJECTILE_PLAYER;
+			f.CollidesWith = Group.ENEMY | Group.WORLD_BORDER;
+
+            mBody.LinearVelocity = projectileVelocity;
         }
 
 		public override bool OnCollision(Fixture f1, Fixture f2, FarseerPhysics.Dynamics.Contacts.Contact contact)
 		{
 			this.Remove();
-
 			return true;
 		}
 
@@ -61,7 +66,7 @@ namespace XNAPractice
 		{
 			base.Update(dt);
 
-			mBody.LinearVelocity = new Vector2(40, 0);
+			
 		}
     }
 }

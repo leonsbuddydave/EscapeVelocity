@@ -184,6 +184,15 @@
       <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\Content\testenemyhit.xnb</Output>
       <Time>2013-03-14T20:08:39-05:00</Time>
     </Item>
+    <Item>
+      <Source>scene01.png</Source>
+      <Name>scene01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\Content\scene01.xnb</Output>
+      <Time>2013-03-20T12:29:44-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{9F2A2B2F-CA69-4915-A03C-B0BF857D9691}</ContentProjectGUID>

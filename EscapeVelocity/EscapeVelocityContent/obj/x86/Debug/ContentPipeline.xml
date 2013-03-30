@@ -185,12 +185,12 @@
       <Time>2013-02-26T19:05:02-06:00</Time>
     </Item>
     <Item>
-      <Source>Scene01 lineart.png</Source>
-      <Name>Scene01 lineart</Name>
+      <Source>scene01.png</Source>
+      <Name>scene01</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\Content\Scene01 lineart.xnb</Output>
+      <Output>C:\Users\leons_000\Dropbox\EscapeVelocity\EscapeVelocity\EscapeVelocity\bin\x86\Debug\Content\scene01.xnb</Output>
       <Time>2013-03-20T12:29:44.4811879-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>

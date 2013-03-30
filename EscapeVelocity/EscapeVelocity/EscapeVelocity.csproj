@@ -74,19 +74,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actors\TestEnemy.cs" />
-    <Compile Include="Collision\BroadPhaseCollisionMatch.cs" />
-    <Compile Include="Collision\Collider.cs" />
-    <Compile Include="Collision\CollisionResult.cs" />
     <Compile Include="Debug\Primitives.cs" />
-    <Compile Include="Enums\CollisionGroup.cs" />
+    <Compile Include="Enums\Group.cs" />
     <Compile Include="Enums\Tags.cs" />
     <Compile Include="Enums\WeaponSlot.cs" />
+    <Compile Include="Environment\WorldBorder.cs" />
     <Compile Include="Manager\Globals.cs" />
     <Compile Include="Manager\Fonts.cs" />
     <Compile Include="Modifiers\PersistentMoveModifier.cs" />
     <Compile Include="Persistent\ControlType.cs" />
     <Compile Include="Persistent\Settings.cs" />
-    <Compile Include="Shape\Polygon.cs" />
     <Compile Include="Sprite\AnimatedSprite.cs" />
     <Compile Include="Drawable\Drawable.cs" />
     <Compile Include="Drawable\IDrawable.cs" />

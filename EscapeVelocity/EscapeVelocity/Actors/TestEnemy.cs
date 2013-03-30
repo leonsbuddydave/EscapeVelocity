@@ -32,6 +32,7 @@ namespace XNAPractice
 			mBody = BodyFactory.CreateBody(Graph.getPhysicsWorld());
 			mBody.BodyType = BodyType.Dynamic;
 			mBody.Position = new Vector2(x, y);
+			mBody.IgnoreGravity = true;
 
 			PolygonShape shape = new PolygonShape(new Vertices(new Vector2[]
             {
@@ -41,6 +42,9 @@ namespace XNAPractice
             }), 1);
 
 			Fixture f = mBody.CreateFixture(shape);
+
+			f.CollisionCategories = Group.ENEMY;
+			f.CollidesWith = Group.PROJECTILE_PLAYER;
 
 			f.OnCollision = OnCollision;
 		}

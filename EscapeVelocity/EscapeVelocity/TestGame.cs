@@ -38,7 +38,8 @@ namespace XNAPractice
             //graphics.SynchronizeWithVerticalRetrace = false;
             //IsFixedTimeStep = false;
 
-			
+			Globals.ScreenHeight = gameHeight;
+			Globals.ScreenWidth = gameWidth;
 
             Content.RootDirectory = "Content";
         }
